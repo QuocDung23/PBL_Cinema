@@ -1,9 +1,12 @@
-﻿using rạp_chiếu_phim.khách_hàng;
+﻿using cinema_system.khách_hàng;
+using cinema_system.đăng_nhập;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using cinema_system.nhân_viên;
+using cinema_system.Khách_hàng;
 
 namespace cinema_system
 {
@@ -17,7 +20,7 @@ namespace cinema_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserDesign());
+            Application.Run(new Đăng_nhập());
         }
     }
 }

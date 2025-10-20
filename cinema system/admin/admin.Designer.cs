@@ -1,4 +1,4 @@
-﻿namespace rạp_chiếu_phim.admin
+﻿namespace cinema_system.admin
 {
     partial class admin_design
     {
@@ -35,7 +35,6 @@
             this.panelcovertrai = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.exit = new System.Windows.Forms.Button();
-            this.PhongChieu = new System.Windows.Forms.Button();
             this.Phim = new System.Windows.Forms.Button();
             this.SuatChieu = new System.Windows.Forms.Button();
             this.Thongke = new System.Windows.Forms.Button();
@@ -63,8 +62,8 @@
             // 
             // panel9
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Location = new System.Drawing.Point(242, 84);
@@ -74,7 +73,7 @@
             // 
             // panel7
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Location = new System.Drawing.Point(242, 3);
@@ -97,7 +96,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.exit);
-            this.panel2.Controls.Add(this.PhongChieu);
             this.panel2.Controls.Add(this.Phim);
             this.panel2.Controls.Add(this.SuatChieu);
             this.panel2.Controls.Add(this.Thongke);
@@ -121,19 +119,6 @@
             this.exit.Text = "Thoát";
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // PhongChieu
-            // 
-            this.PhongChieu.BackColor = System.Drawing.Color.Black;
-            this.PhongChieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhongChieu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.PhongChieu.Location = new System.Drawing.Point(0, 194);
-            this.PhongChieu.Name = "PhongChieu";
-            this.PhongChieu.Size = new System.Drawing.Size(239, 52);
-            this.PhongChieu.TabIndex = 9;
-            this.PhongChieu.Text = "Phòng chiếu";
-            this.PhongChieu.UseVisualStyleBackColor = false;
-            this.PhongChieu.Click += new System.EventHandler(this.PhongChieu_Click);
             // 
             // Phim
             // 
@@ -243,7 +228,6 @@
 
         private System.Windows.Forms.Panel panelcovertrai;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button PhongChieu;
         private System.Windows.Forms.Button Phim;
         private System.Windows.Forms.Button SuatChieu;
         private System.Windows.Forms.Button Thongke;

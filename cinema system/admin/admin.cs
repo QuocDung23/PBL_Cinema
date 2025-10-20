@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rạp_chiếu_phim.admin
+namespace cinema_system.admin
 {
     public partial class admin_design : Form
     {

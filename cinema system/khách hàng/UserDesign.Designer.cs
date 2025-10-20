@@ -1,4 +1,4 @@
-﻿namespace rạp_chiếu_phim.khách_hàng
+﻿namespace cinema_system.khách_hàng
 {
     partial class UserDesign
     {
@@ -42,8 +42,8 @@
             // 
             // flowLayoutPanelDates
             // 
-            this.flowLayoutPanelDates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.flowLayoutPanelDates.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanelDates.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanelDates.Location = new System.Drawing.Point(63, 61);
@@ -78,8 +78,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::cinema_system.Properties.Resources.images;
             this.pictureBox1.Location = new System.Drawing.Point(63, 220);

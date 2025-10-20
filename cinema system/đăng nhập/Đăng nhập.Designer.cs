@@ -1,4 +1,4 @@
-﻿namespace rạp_chiếu_phim.đăng_nhập
+﻿namespace cinema_system.đăng_nhập
 {
     partial class Đăng_nhập
     {
@@ -10,7 +10,7 @@
         private System.Windows.Forms.TabPage tabLogin;
         private System.Windows.Forms.TabPage tabRegister;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblCaptcha;
@@ -43,7 +43,7 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabLogin = new System.Windows.Forms.TabPage();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblCaptcha = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@
             // 
             this.tabLogin.BackColor = System.Drawing.SystemColors.Info;
             this.tabLogin.Controls.Add(this.lblEmail);
-            this.tabLogin.Controls.Add(this.txtEmail);
+            this.tabLogin.Controls.Add(this.txtUsername);
             this.tabLogin.Controls.Add(this.lblPassword);
             this.tabLogin.Controls.Add(this.txtPassword);
             this.tabLogin.Controls.Add(this.lblCaptcha);
@@ -101,12 +101,12 @@
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "Email hoặc số điện thoại";
             // 
-            // txtEmail
+            // txtUsername
             // 
-            this.txtEmail.Location = new System.Drawing.Point(34, 60);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(517, 30);
-            this.txtEmail.TabIndex = 1;
+            this.txtUsername.Location = new System.Drawing.Point(34, 60);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(517, 30);
+            this.txtUsername.TabIndex = 1;
             // 
             // lblPassword
             // 

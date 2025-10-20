@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace rạp_chiếu_phim.đăng_nhập
+namespace cinema_system.đăng_nhập
 {
     partial class UC_Đăng_ký
     {

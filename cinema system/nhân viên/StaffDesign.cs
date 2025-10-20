@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cinema_system.đăng_nhập;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rạp_chiếu_phim.nhân_viên
+namespace cinema_system.nhân_viên
 {
     public partial class StaffDesign : Form
     {
@@ -44,28 +45,46 @@ namespace rạp_chiếu_phim.nhân_viên
         // Sự kiện các nút menu
         private void SuatChieu_Click(object sender, EventArgs e)
         {
-            ActivateButton((Button)sender);
-            // load nội dung UserControl vào panelContent nếu cần
+            panel9.Controls.Clear();
+            ThemMovie them = new ThemMovie();
+            them.Dock = DockStyle.Fill;
+            panel9.Controls.Add(them);
         }
 
         private void Ve_Click(object sender, EventArgs e)
         {
-            ActivateButton((Button)sender);
+            panel9.Controls.Clear();
+            dat_ve ve = new dat_ve();
+            ve.Dock = DockStyle.Fill;
+            panel9.Controls.Add(ve);
         }
 
         private void PhongChieu_Click(object sender, EventArgs e)
         {
-            ActivateButton((Button)sender);
+            panel9.Controls.Clear();
+            RoomMovieControl roomMovie = new RoomMovieControl();
+            roomMovie.Dock = DockStyle.Fill;
+            panel9.Controls.Add(roomMovie);
         }
 
         private void Phim_Click(object sender, EventArgs e)
         {
-            ActivateButton((Button)sender);
+            panel9.Controls.Clear();
+            addmovie movie = new addmovie();
+            movie.Dock =DockStyle.Fill;
+            panel9.Controls.Add(movie);
         }
 
         private void HoannVe_Click(object sender, EventArgs e)
         {
             ActivateButton((Button)sender);
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Đăng_nhập dn = new Đăng_nhập();
+            dn.Show();
+            this.Hide();
         }
 
         //private void StaffDesign_Load(object sender, EventArgs e)

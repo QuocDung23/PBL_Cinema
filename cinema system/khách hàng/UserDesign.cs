@@ -1,4 +1,6 @@
-﻿using rạp_chiếu_phim.đăng_nhập;
+﻿using cinema_system.đăng_nhập;
+using cinema_system.khách_hàng;
+using rạp_chiếu_phim.khách_hàng;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rạp_chiếu_phim.khách_hàng
+namespace cinema_system.khách_hàng
 {
     public partial class UserDesign : Form
     {

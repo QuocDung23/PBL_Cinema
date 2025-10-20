@@ -52,6 +52,12 @@
     <Compile Include="admin\admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="admin\AllStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\AllStaff.Designer.cs">
+      <DependentUpon>AllStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarouselControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -76,6 +82,18 @@
     <Compile Include="khách hàng\phòng chiếu.Designer.cs">
       <DependentUpon>phòng chiếu.cs</DependentUpon>
     </Compile>
+    <Compile Include="khách hàng\thay doi thong tin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="khách hàng\thay doi thong tin.Designer.cs">
+      <DependentUpon>thay doi thong tin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="khách hàng\thông tin chung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="khách hàng\thông tin chung.Designer.cs">
+      <DependentUpon>thông tin chung.cs</DependentUpon>
+    </Compile>
     <Compile Include="khách hàng\thông tin khách hàng.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,11 +106,41 @@
     <Compile Include="khách hàng\UserDesign.Designer.cs">
       <DependentUpon>UserDesign.cs</DependentUpon>
     </Compile>
+    <Compile Include="nhân viên\addmovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="nhân viên\addmovie.Designer.cs">
+      <DependentUpon>addmovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nhân viên\dat_ve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="nhân viên\dat_ve.Designer.cs">
+      <DependentUpon>dat_ve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nhân viên\MovieItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="nhân viên\MovieItem.Designer.cs">
+      <DependentUpon>MovieItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nhân viên\RoomMovieControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="nhân viên\RoomMovieControl.Designer.cs">
+      <DependentUpon>RoomMovieControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="nhân viên\StaffDesign.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="nhân viên\StaffDesign.Designer.cs">
       <DependentUpon>StaffDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nhân viên\suất chiếu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="nhân viên\suất chiếu.Designer.cs">
+      <DependentUpon>suất chiếu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,11 +156,50 @@
     <Compile Include="đăng nhập\Đăng nhập.Designer.cs">
       <DependentUpon>Đăng nhập.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="admin\admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\AllStaff.resx">
+      <DependentUpon>AllStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="khách hàng\drink.resx">
       <DependentUpon>drink.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="khách hàng\Order thức uống.resx">
+      <DependentUpon>Order thức uống.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="khách hàng\phòng chiếu.resx">
+      <DependentUpon>phòng chiếu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="khách hàng\thay doi thong tin.resx">
+      <DependentUpon>thay doi thong tin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="khách hàng\thông tin chung.resx">
+      <DependentUpon>thông tin chung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="khách hàng\thông tin khách hàng.resx">
+      <DependentUpon>thông tin khách hàng.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="khách hàng\UserDesign.resx">
       <DependentUpon>UserDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhân viên\addmovie.resx">
+      <DependentUpon>addmovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhân viên\dat_ve.resx">
+      <DependentUpon>dat_ve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhân viên\MovieItem.resx">
+      <DependentUpon>MovieItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhân viên\RoomMovieControl.resx">
+      <DependentUpon>RoomMovieControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhân viên\StaffDesign.resx">
+      <DependentUpon>StaffDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhân viên\suất chiếu.resx">
+      <DependentUpon>suất chiếu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +211,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="đăng nhập\UC_DangKY.resx">
+      <DependentUpon>UC_DangKy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="đăng nhập\Đăng nhập.resx">
       <DependentUpon>Đăng nhập.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +235,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\netflix-octobre-contenus-2022.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon movie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="script.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

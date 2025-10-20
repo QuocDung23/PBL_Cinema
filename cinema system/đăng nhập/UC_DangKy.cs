@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace rạp_chiếu_phim.đăng_nhập
+namespace cinema_system.đăng_nhập
 {
     public partial class UC_Đăng_ký : UserControl
     {
-        string conn = @"Data Source=shanley\sqlexpress;Initial Catalog=""quan ly rap chieu phim"";Integrated Security=True;Encrypt=False";
+        string conn = @"Data Source=shanley\sqlexpress;Initial Catalog=movie;Integrated Security=True;Encrypt=False";
         private string captchaText;
 
         public UC_Đăng_ký()
@@ -61,17 +61,19 @@ namespace rạp_chiếu_phim.đăng_nhập
         // Kiểm tra captcha khi người dùng nhập
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtName.Text == "" || txtPassword.Text == "")
-            {
-                MessageBox.Show("Hãy điền thông tin vào tên đăng nhập và mật khẩu");
+            // Kiểm tra thông tin nhập
+            if (!ValidateInput())
                 return;
-            }
-            else
+
+            try
             {
                 using (SqlConnection connect = new SqlConnection(conn))
                 {
                     connect.Open();
-                    string checkUsername = "SELECT COUNT(*) FROM [dbo].[Tài khoản] WHERE TenDangNhap = @username";
+                    MessageBox.Show("Đang ghi vào DB: " + connect.Database);
+
+                    // 1️⃣ Kiểm tra tên đăng nhập đã tồn tại chưa
+                    string checkUsername = "SELECT COUNT(*) FROM [dbo].[TaiKhoan] WHERE TenDangNhap = @username";
                     using (SqlCommand CheckUser = new SqlCommand(checkUsername, connect))
                     {
                         CheckUser.Parameters.AddWithValue("@username", txtName.Text.Trim());
@@ -82,31 +84,49 @@ namespace rạp_chiếu_phim.đăng_nhập
                             MessageBox.Show("Đăng ký thất bại, tài khoản đã tồn tại!");
                             return;
                         }
-                        else
+                    }
+
+                    // 2️⃣ Sinh IDTaiKhoan tự tăng
+                    string getMaxID = "SELECT TOP 1 IDTaiKhoan FROM [dbo].[TaiKhoan] ORDER BY IDTaiKhoan DESC";
+                    string newID = "TK001";
+                    using (SqlCommand cmdGetID = new SqlCommand(getMaxID, connect))
+                    {
+                        object result = cmdGetID.ExecuteScalar();
+                        if (result != null)
                         {
-                            string insertData = "INSERT INTO [dbo].[Tài khoản] (TenDangNhap, Pass, Email, SDT) " + "VALUES (@username, @pass, @email, @phone)";
-
-                            using (SqlCommand cmd = new SqlCommand(insertData, connect))
-                            {
-                                cmd.Parameters.AddWithValue("@username", txtName.Text.Trim());
-                                cmd.Parameters.AddWithValue("@pass", txtPassword.Text.Trim());
-                                cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
-                                cmd.Parameters.AddWithValue("@phone", txtPhone.Text.Trim());
-
-
-                                cmd.ExecuteNonQuery();
-
-                                MessageBox.Show("Đăng ký thành công!");
-
-
-                            }
+                            string lastID = result.ToString(); // ví dụ: TK005
+                            int num = int.Parse(lastID.Substring(2)) + 1;
+                            newID = "TK" + num.ToString("D3"); // TK006
                         }
+                    }
+
+                    // 3️⃣ Chèn tài khoản mới
+                    string insertData = @"
+                INSERT INTO [dbo].[TaiKhoan] 
+                (TenDangNhap, Pass, Email, SDT, VaiTro, NgayTao) 
+                VALUES 
+                (@username, @pass, @email, @phone, @role, @created)";
+
+                    using (SqlCommand cmd = new SqlCommand(insertData, connect))
+                    {
+                        cmd.Parameters.AddWithValue("@username", txtName.Text.Trim());
+                        cmd.Parameters.AddWithValue("@pass", txtPassword.Text.Trim());
+                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+                        cmd.Parameters.AddWithValue("@phone", txtPhone.Text.Trim());
+                        cmd.Parameters.AddWithValue("@role", "User");
+                        cmd.Parameters.AddWithValue("@created", DateTime.Now);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Đăng ký thành công!");
                     }
                 }
             }
-
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi đăng ký: " + ex.Message);
+            }
         }
+
 
         private bool ValidateInput()
         {
@@ -141,18 +161,6 @@ namespace rạp_chiếu_phim.đăng_nhập
             {
                 MessageBox.Show("Vui lòng nhập mật khẩu!");
                 txtPassword.Focus();
-                return false;
-            }
-
-            if (cbDay.SelectedIndex == -1 || cbMonth.SelectedIndex == -1 || cbYear.SelectedIndex == -1)
-            {
-                MessageBox.Show("Vui lòng chọn ngày sinh!");
-                return false;
-            }
-
-            if (!rbMale.Checked && !rbFemale.Checked)
-            {
-                MessageBox.Show("Vui lòng chọn giới tính!");
                 return false;
             }
 
