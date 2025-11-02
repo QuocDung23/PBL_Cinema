@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using cinema_system.AD;
 using cinema_system.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,6 +27,8 @@ namespace cinema_system.nhân_viên
 
             this.Text = $"Nhân viên - {userName}";
             this.BackColor = Color.FromArgb(40, 40, 40);
+
+            ApplyRolePermissions();
         }
 
         private List<Movie> GetMoviesFromDb()
@@ -163,8 +166,85 @@ namespace cinema_system.nhân_viên
         private void btnQuanLyPhim_Click(object sender, EventArgs e)
         {
             MovieManagementForm managementForm = new MovieManagementForm();
+            this.Hide();
             managementForm.ShowDialog();  
-            LoadMovies();  
+            LoadMovies();
+            this.Show();
+        }
+
+        private void btnShowTime_Click(object sender, EventArgs e)
+        {
+            RoomManagementForm roomManagementForm = new RoomManagementForm();
+            this.Hide();
+            roomManagementForm.ShowDialog();
+            LoadMovies();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowTimeManagementForm showTimeManagementForm = new ShowTimeManagementForm();
+            this.Hide();
+            showTimeManagementForm.ShowDialog();
+            LoadMovies();
+            this.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SeatManagementForm seatManagementForm = new SeatManagementForm();
+            this.Hide();
+            seatManagementForm.ShowDialog();
+            LoadMovies();
+            this.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddStaffForm addStaffForm = new AddStaffForm();
+            this.Hide();
+            addStaffForm.ShowDialog();
+            LoadMovies();
+            this.Show();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // 1. Tạo thể hiện của Form Lịch sử Vé
+            TicketHistoryForm ticketHistoryForm = new TicketHistoryForm();
+            this.Hide();
+            ticketHistoryForm.ShowDialog();
+            this.Show();
+            LoadMovies();
+        }
+        private void ApplyRolePermissions()
+        {
+            // Giả sử RoleId = 1 là Admin, còn lại là nhân viên
+            bool isAdmin = CurrentRoleId == 1;
+
+            // Nếu không phải admin => disable các chức năng quản lý
+            btnQuanLyPhim.Enabled = isAdmin;
+            btnShowTime.Enabled = isAdmin;
+            button1.Enabled = isAdmin; // ShowTimeManagement
+            button2.Enabled = isAdmin; // SeatManagement
+            button3.Enabled = isAdmin; // AddStaffForm
+
+            if (!isAdmin)
+            {
+                // Cho giao diện dễ hiểu hơn — làm mờ nút
+                btnQuanLyPhim.BackColor = Color.Gray;
+                btnShowTime.BackColor = Color.Gray;
+                button1.BackColor = Color.Gray;
+                button2.BackColor = Color.Gray;
+                button3.BackColor = Color.Gray;
+
+                // Thêm tooltip cho biết lý do bị khóa
+                ToolTip tip = new ToolTip();
+                tip.SetToolTip(btnQuanLyPhim, "Chỉ quản trị viên mới có thể sử dụng chức năng này");
+                tip.SetToolTip(btnShowTime, "Chỉ quản trị viên mới có thể sử dụng chức năng này");
+                tip.SetToolTip(button1, "Chỉ quản trị viên mới có thể sử dụng chức năng này");
+                tip.SetToolTip(button2, "Chỉ quản trị viên mới có thể sử dụng chức năng này");
+                tip.SetToolTip(button3, "Chỉ quản trị viên mới có thể sử dụng chức năng này");
+            }
         }
     }
 }

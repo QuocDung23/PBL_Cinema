@@ -35,7 +35,9 @@
             this.lblDes = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.picPosterDetail)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpShowtimes
@@ -77,10 +79,10 @@
             // lblDes
             // 
             this.lblDes.AutoSize = true;
-            this.lblDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDes.Location = new System.Drawing.Point(373, 245);
+            this.lblDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDes.Location = new System.Drawing.Point(3, 0);
             this.lblDes.Name = "lblDes";
-            this.lblDes.Size = new System.Drawing.Size(51, 20);
+            this.lblDes.Size = new System.Drawing.Size(44, 16);
             this.lblDes.TabIndex = 4;
             this.lblDes.Text = "label1";
             // 
@@ -102,14 +104,22 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Nội dung phim:";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.lblDes);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(345, 238);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(678, 133);
+            this.flowLayoutPanel1.TabIndex = 8;
+            // 
             // MovieDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 611);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblDes);
             this.Controls.Add(this.lblDetail);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.picPosterDetail);
@@ -118,6 +128,8 @@
             this.Name = "MovieDetail";
             this.Text = "MovieDetail";
             ((System.ComponentModel.ISupportInitialize)(this.picPosterDetail)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +142,6 @@
         private System.Windows.Forms.Label lblDes;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

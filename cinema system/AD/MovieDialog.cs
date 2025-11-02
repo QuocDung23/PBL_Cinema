@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using cinema_system.Models;
@@ -117,8 +118,22 @@ namespace cinema_system.nhân_viên
                 return;
             }
 
+            string movieName = txtNameMovie.Text.Trim();
+
             using (var context = new CinemaDbContext())
             {
+                // 🔍 Kiểm tra trùng tên phim
+                bool isDuplicate = context.Movies
+                    .Any(m => m.NameMovie == movieName && m.MovieId != _movie.MovieId);
+
+                if (isDuplicate)
+                {
+                    MessageBox.Show("Tên phim này đã tồn tại trong hệ thống!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNameMovie.Focus();
+                    return;
+                }
+
+                // 🧩 Thêm mới hoặc cập nhật
                 if (_movie.MovieId == 0)
                 {
                     _movie = new Movie();
@@ -130,7 +145,8 @@ namespace cinema_system.nhân_viên
                     context.Entry(_movie).State = EntityState.Modified;
                 }
 
-                _movie.NameMovie = txtNameMovie.Text.Trim();
+                // 📝 Gán dữ liệu từ form
+                _movie.NameMovie = movieName;
                 _movie.GenreMovie = txtGenreMovie.Text.Trim();
                 _movie.DescriptionMovie = txtDescriptionMovie.Text.Trim();
                 _movie.Director = txtDirectorMovie.Text.Trim();
@@ -140,7 +156,7 @@ namespace cinema_system.nhân_viên
 
                 try
                 {
-                    context.SaveChanges(); // ✅ Lưu thật sự vào DB
+                    context.SaveChanges();
                     MessageBox.Show("Lưu phim thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -151,6 +167,7 @@ namespace cinema_system.nhân_viên
                 }
             }
         }
+
 
 
         private void btnCancel_Click(object sender, EventArgs e)

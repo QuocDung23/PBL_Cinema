@@ -1,4 +1,6 @@
-﻿namespace cinema_system
+﻿using System.Windows.Forms;
+
+namespace cinema_system
 {
     partial class BookingSeat
     {
@@ -34,7 +36,6 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnNext = new System.Windows.Forms.Button();
-            this.back = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -97,16 +98,6 @@
             this.btnNext.Text = "Tiếp tục";
             this.btnNext.UseVisualStyleBackColor = true;
             // 
-            // back
-            // 
-            this.back.Location = new System.Drawing.Point(856, 325);
-            this.back.Margin = new System.Windows.Forms.Padding(2);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(75, 31);
-            this.back.TabIndex = 7;
-            this.back.Text = "Quay lại";
-            this.back.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
@@ -160,7 +151,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.back);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel2);
@@ -184,7 +174,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button back;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;

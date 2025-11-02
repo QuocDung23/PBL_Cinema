@@ -39,7 +39,19 @@ namespace cinema_system
                 .HasOne(t => t.Staff)
                 .WithMany(u => u.TicketsSold)
                 .HasForeignKey(t => t.StaffId)
-                .IsRequired(false); 
+                .IsRequired(false);
+
+            //modelBuilder.Entity<ShowTime>()
+            //    .HasOne(s => s.Movie)
+            //    .WithMany(m => m.ShowTimes)
+            //    .HasForeignKey(s => s.MovieId)
+            //    .OnDelete(DeleteBehavior.Cascade);
+
+            //modelBuilder.Entity<ShowTime>()
+            //    .HasOne(s => s.Room)
+            //    .WithMany()
+            //    .HasForeignKey(s => s.RoomId)
+            //    .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

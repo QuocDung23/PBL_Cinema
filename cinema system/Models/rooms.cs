@@ -12,6 +12,7 @@ namespace cinema_system.Models
         public string NameRoom { get; set; }
         public int TotalSeat { get; set; }
         public string TypeRoom { get; set; }
+        public bool? IsActive { get; set; }
 
         // Navigation Property
         public ICollection<Seat> Seats { get; set; } = new List<Seat>();

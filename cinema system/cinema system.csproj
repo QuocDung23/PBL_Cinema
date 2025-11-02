@@ -245,6 +245,12 @@
     <Compile Include="admin\AllStaff.Designer.cs">
       <DependentUpon>AllStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="AD\AddStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD\AddStaffForm.Designer.cs">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AD\MovieDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,24 @@
     </Compile>
     <Compile Include="AD\MovieManagementForm.Designer.cs">
       <DependentUpon>MovieManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD\RoomManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD\RoomManagementForm.Designer.cs">
+      <DependentUpon>RoomManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD\SeatManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD\SeatManagementForm.Designer.cs">
+      <DependentUpon>SeatManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD\ShowTimeManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD\ShowTimeManagementForm.Designer.cs">
+      <DependentUpon>ShowTimeManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Bill.cs" />
     <Compile Include="nhân viên\BookingSeat.cs">
@@ -325,6 +349,12 @@
     <Compile Include="nhân viên\suất chiếu.Designer.cs">
       <DependentUpon>suất chiếu.cs</DependentUpon>
     </Compile>
+    <Compile Include="nhân viên\TicketHistoryForm .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nhân viên\TicketHistoryForm .Designer.cs">
+      <DependentUpon>TicketHistoryForm .cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -350,11 +380,23 @@
     <EmbeddedResource Include="admin\AllStaff.resx">
       <DependentUpon>AllStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AD\AddStaffForm.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AD\MovieDialog.resx">
       <DependentUpon>MovieDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AD\MovieManagementForm.resx">
       <DependentUpon>MovieManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD\RoomManagementForm.resx">
+      <DependentUpon>RoomManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD\SeatManagementForm.resx">
+      <DependentUpon>SeatManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD\ShowTimeManagementForm.resx">
+      <DependentUpon>ShowTimeManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="nhân viên\BookingSeat.resx">
       <DependentUpon>BookingSeat.cs</DependentUpon>
@@ -379,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="nhân viên\suất chiếu.resx">
       <DependentUpon>suất chiếu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nhân viên\TicketHistoryForm .resx">
+      <DependentUpon>TicketHistoryForm .cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -411,6 +456,7 @@
     <Content Include="Images\MuaDo.jpg" />
     <Content Include="Images\TrangQuynh.jpg" />
     <Content Include="Images\WIN_20251014_14_16_26_Pro.jpg" />
+    <None Include="Resources\bg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

@@ -6,18 +6,6 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TabPage tabLogin;
-        private System.Windows.Forms.TabPage tabRegister;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblCaptcha;
-        private System.Windows.Forms.TextBox txtCaptcha;
-        private System.Windows.Forms.PictureBox picCaptcha;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.LinkLabel linkForgot;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -40,23 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.back = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabLogin = new System.Windows.Forms.TabPage();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblCaptcha = new System.Windows.Forms.Label();
-            this.txtCaptcha = new System.Windows.Forms.TextBox();
-            this.picCaptcha = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.linkForgot = new System.Windows.Forms.LinkLabel();
             this.tabRegister = new System.Windows.Forms.TabPage();
-            this.back = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCaptcha)).BeginInit();
             this.SuspendLayout();
+            // 
+            // back
+            // 
+            this.back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.back.BackColor = System.Drawing.SystemColors.Info;
+            this.back.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.Location = new System.Drawing.Point(649, 10);
+            this.back.Margin = new System.Windows.Forms.Padding(2);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(95, 32);
+            this.back.TabIndex = 1;
+            this.back.Text = "Quay lại";
+            this.back.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::cinema_system.Properties.Resources.bg;
+            this.pictureBox1.Location = new System.Drawing.Point(1, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(756, 511);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // tabControl
             // 
@@ -67,13 +75,12 @@
             this.tabControl.Controls.Add(this.tabRegister);
             this.tabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl.Location = new System.Drawing.Point(143, 23);
+            this.tabControl.Location = new System.Drawing.Point(156, 39);
             this.tabControl.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(440, 426);
-            this.tabControl.TabIndex = 0;
-            //this.tabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
+            this.tabControl.TabIndex = 3;
             // 
             // tabLogin
             // 
@@ -82,9 +89,6 @@
             this.tabLogin.Controls.Add(this.txtUsername);
             this.tabLogin.Controls.Add(this.lblPassword);
             this.tabLogin.Controls.Add(this.txtPassword);
-            this.tabLogin.Controls.Add(this.lblCaptcha);
-            this.tabLogin.Controls.Add(this.txtCaptcha);
-            this.tabLogin.Controls.Add(this.picCaptcha);
             this.tabLogin.Controls.Add(this.btnLogin);
             this.tabLogin.Controls.Add(this.linkForgot);
             this.tabLogin.Location = new System.Drawing.Point(4, 28);
@@ -97,7 +101,7 @@
             // lblEmail
             // 
             this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(22, 24);
+            this.lblEmail.Location = new System.Drawing.Point(22, 52);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(170, 22);
@@ -106,7 +110,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(26, 49);
+            this.txtUsername.Location = new System.Drawing.Point(26, 76);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(389, 26);
@@ -115,7 +119,7 @@
             // lblPassword
             // 
             this.lblPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(22, 83);
+            this.lblPassword.Location = new System.Drawing.Point(22, 128);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(104, 19);
@@ -124,46 +128,18 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(26, 104);
+            this.txtPassword.Location = new System.Drawing.Point(26, 149);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(389, 26);
             this.txtPassword.TabIndex = 3;
             // 
-            // lblCaptcha
-            // 
-            this.lblCaptcha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaptcha.Location = new System.Drawing.Point(22, 147);
-            this.lblCaptcha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCaptcha.Name = "lblCaptcha";
-            this.lblCaptcha.Size = new System.Drawing.Size(278, 19);
-            this.lblCaptcha.TabIndex = 4;
-            this.lblCaptcha.Text = "Vui lòng nhập ký tự bên dưới";
-            // 
-            // txtCaptcha
-            // 
-            this.txtCaptcha.Location = new System.Drawing.Point(26, 179);
-            this.txtCaptcha.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCaptcha.Name = "txtCaptcha";
-            this.txtCaptcha.Size = new System.Drawing.Size(168, 26);
-            this.txtCaptcha.TabIndex = 5;
-            // 
-            // picCaptcha
-            // 
-            this.picCaptcha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picCaptcha.Location = new System.Drawing.Point(222, 179);
-            this.picCaptcha.Margin = new System.Windows.Forms.Padding(2);
-            this.picCaptcha.Name = "picCaptcha";
-            this.picCaptcha.Size = new System.Drawing.Size(111, 41);
-            this.picCaptcha.TabIndex = 6;
-            this.picCaptcha.TabStop = false;
-            // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Red;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(26, 235);
+            this.btnLogin.Location = new System.Drawing.Point(26, 220);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(370, 44);
@@ -176,7 +152,7 @@
             // 
             this.linkForgot.AutoSize = true;
             this.linkForgot.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkForgot.Location = new System.Drawing.Point(87, 288);
+            this.linkForgot.Location = new System.Drawing.Point(84, 278);
             this.linkForgot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkForgot.Name = "linkForgot";
             this.linkForgot.Size = new System.Drawing.Size(258, 25);
@@ -193,36 +169,23 @@
             this.tabRegister.TabIndex = 1;
             this.tabRegister.Text = "ĐĂNG KÝ";
             // 
-            // back
-            // 
-            this.back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.back.BackColor = System.Drawing.SystemColors.Info;
-            this.back.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back.Location = new System.Drawing.Point(649, 10);
-            this.back.Margin = new System.Windows.Forms.Padding(2);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(95, 32);
-            this.back.TabIndex = 1;
-            this.back.Text = "Quay lại";
-            this.back.UseVisualStyleBackColor = false;
-            //this.back.Click += new System.EventHandler(this.back_Click);
-            // 
             // Đăng_nhập
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(753, 505);
-            this.Controls.Add(this.back);
             this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.back);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Đăng_nhập";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập hệ thống";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.tabLogin.ResumeLayout(false);
             this.tabLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCaptcha)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,5 +193,15 @@
         #endregion
 
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage tabLogin;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.LinkLabel linkForgot;
+        private System.Windows.Forms.TabPage tabRegister;
     }
 }
