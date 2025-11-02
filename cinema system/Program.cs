@@ -1,12 +1,10 @@
-﻿using cinema_system.khách_hàng;
-using cinema_system.đăng_nhập;
+﻿using cinema_system.đăng_nhập;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using cinema_system.nhân_viên;
-using cinema_system.Khách_hàng;
 
 namespace cinema_system
 {

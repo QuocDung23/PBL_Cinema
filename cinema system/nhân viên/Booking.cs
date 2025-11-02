@@ -8,16 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rạp_chiếu_phim.khách_hàng
+namespace cinema_system.nhân_viên
 {
-    public partial class drink : Form
+    public partial class Booking: Form
     {
-        public drink()
+        public Booking()
         {
             InitializeComponent();
         }
-
-
-
     }
 }

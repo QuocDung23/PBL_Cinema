@@ -67,12 +67,13 @@
             this.tabControl.Controls.Add(this.tabRegister);
             this.tabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl.Location = new System.Drawing.Point(10, 10);
+            this.tabControl.Location = new System.Drawing.Point(143, 23);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(586, 524);
+            this.tabControl.Size = new System.Drawing.Size(440, 426);
             this.tabControl.TabIndex = 0;
-            this.tabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
+            //this.tabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl_DrawItem);
             // 
             // tabLogin
             // 
@@ -86,67 +87,75 @@
             this.tabLogin.Controls.Add(this.picCaptcha);
             this.tabLogin.Controls.Add(this.btnLogin);
             this.tabLogin.Controls.Add(this.linkForgot);
-            this.tabLogin.Location = new System.Drawing.Point(4, 31);
+            this.tabLogin.Location = new System.Drawing.Point(4, 28);
+            this.tabLogin.Margin = new System.Windows.Forms.Padding(2);
             this.tabLogin.Name = "tabLogin";
-            this.tabLogin.Size = new System.Drawing.Size(578, 489);
+            this.tabLogin.Size = new System.Drawing.Size(432, 394);
             this.tabLogin.TabIndex = 0;
             this.tabLogin.Text = "ĐĂNG NHẬP";
             // 
             // lblEmail
             // 
             this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(30, 30);
+            this.lblEmail.Location = new System.Drawing.Point(22, 24);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(226, 27);
+            this.lblEmail.Size = new System.Drawing.Size(170, 22);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "Email hoặc số điện thoại";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(34, 60);
+            this.txtUsername.Location = new System.Drawing.Point(26, 49);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(517, 30);
+            this.txtUsername.Size = new System.Drawing.Size(389, 26);
             this.txtUsername.TabIndex = 1;
             // 
             // lblPassword
             // 
             this.lblPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(30, 102);
+            this.lblPassword.Location = new System.Drawing.Point(22, 83);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(138, 23);
+            this.lblPassword.Size = new System.Drawing.Size(104, 19);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Mật khẩu";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(34, 128);
+            this.txtPassword.Location = new System.Drawing.Point(26, 104);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(517, 30);
+            this.txtPassword.Size = new System.Drawing.Size(389, 26);
             this.txtPassword.TabIndex = 3;
             // 
             // lblCaptcha
             // 
             this.lblCaptcha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCaptcha.Location = new System.Drawing.Point(30, 181);
+            this.lblCaptcha.Location = new System.Drawing.Point(22, 147);
+            this.lblCaptcha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCaptcha.Name = "lblCaptcha";
-            this.lblCaptcha.Size = new System.Drawing.Size(370, 23);
+            this.lblCaptcha.Size = new System.Drawing.Size(278, 19);
             this.lblCaptcha.TabIndex = 4;
             this.lblCaptcha.Text = "Vui lòng nhập ký tự bên dưới";
             // 
             // txtCaptcha
             // 
-            this.txtCaptcha.Location = new System.Drawing.Point(34, 220);
+            this.txtCaptcha.Location = new System.Drawing.Point(26, 179);
+            this.txtCaptcha.Margin = new System.Windows.Forms.Padding(2);
             this.txtCaptcha.Name = "txtCaptcha";
-            this.txtCaptcha.Size = new System.Drawing.Size(223, 30);
+            this.txtCaptcha.Size = new System.Drawing.Size(168, 26);
             this.txtCaptcha.TabIndex = 5;
             // 
             // picCaptcha
             // 
             this.picCaptcha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picCaptcha.Location = new System.Drawing.Point(296, 220);
+            this.picCaptcha.Location = new System.Drawing.Point(222, 179);
+            this.picCaptcha.Margin = new System.Windows.Forms.Padding(2);
             this.picCaptcha.Name = "picCaptcha";
-            this.picCaptcha.Size = new System.Drawing.Size(147, 50);
+            this.picCaptcha.Size = new System.Drawing.Size(111, 41);
             this.picCaptcha.TabIndex = 6;
             this.picCaptcha.TabStop = false;
             // 
@@ -154,9 +163,10 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Red;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(34, 289);
+            this.btnLogin.Location = new System.Drawing.Point(26, 235);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(494, 54);
+            this.btnLogin.Size = new System.Drawing.Size(370, 44);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "ĐĂNG NHẬP";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -166,18 +176,20 @@
             // 
             this.linkForgot.AutoSize = true;
             this.linkForgot.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkForgot.Location = new System.Drawing.Point(116, 355);
+            this.linkForgot.Location = new System.Drawing.Point(87, 288);
+            this.linkForgot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkForgot.Name = "linkForgot";
-            this.linkForgot.Size = new System.Drawing.Size(327, 33);
+            this.linkForgot.Size = new System.Drawing.Size(258, 25);
             this.linkForgot.TabIndex = 8;
             this.linkForgot.TabStop = true;
             this.linkForgot.Text = "Bạn muốn tìm lại mật khẩu?";
             // 
             // tabRegister
             // 
-            this.tabRegister.Location = new System.Drawing.Point(4, 31);
+            this.tabRegister.Location = new System.Drawing.Point(4, 28);
+            this.tabRegister.Margin = new System.Windows.Forms.Padding(2);
             this.tabRegister.Name = "tabRegister";
-            this.tabRegister.Size = new System.Drawing.Size(578, 489);
+            this.tabRegister.Size = new System.Drawing.Size(432, 394);
             this.tabRegister.TabIndex = 1;
             this.tabRegister.Text = "ĐĂNG KÝ";
             // 
@@ -186,23 +198,24 @@
             this.back.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.back.BackColor = System.Drawing.SystemColors.Info;
             this.back.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back.Location = new System.Drawing.Point(865, 12);
+            this.back.Location = new System.Drawing.Point(649, 10);
+            this.back.Margin = new System.Windows.Forms.Padding(2);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(127, 40);
+            this.back.Size = new System.Drawing.Size(95, 32);
             this.back.TabIndex = 1;
             this.back.Text = "Quay lại";
             this.back.UseVisualStyleBackColor = false;
-            this.back.Click += new System.EventHandler(this.back_Click);
+            //this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // Đăng_nhập
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.BackgroundImage = global::cinema_system.Properties.Resources.netflix_octobre_contenus_2022;
-            this.ClientSize = new System.Drawing.Size(1004, 622);
+            this.ClientSize = new System.Drawing.Size(753, 505);
             this.Controls.Add(this.back);
             this.Controls.Add(this.tabControl);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Đăng_nhập";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập hệ thống";
